@@ -30,7 +30,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(231, 76, 60, 0.9);
+  background-color: var(--color-primary);
   color: white;
   border: none;
   width: 40px;
@@ -50,8 +50,8 @@
 }
 
 .carousel-btn:hover:not(:disabled) {
-  background-color: #c0392b;
-  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.5);
+  background-color: var(--color-primary-dark);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -81,19 +81,19 @@
   height: 8px;
   border-radius: 50%;
   border: none;
-  background-color: #d0d0d0;
+  background-color: var(--color-border);
   cursor: pointer;
   transition: all 0.3s ease;
   padding: 0;
 }
 
 .indicator:hover {
-  background-color: #999;
+  background-color: var(--color-text-light);
   transform: scale(1.2);
 }
 
 .indicator.active {
-  background-color: #e74c3c;
+  background-color: var(--color-primary);
   width: 24px;
   border-radius: 4px;
 }

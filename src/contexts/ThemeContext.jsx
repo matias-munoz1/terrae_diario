@@ -64,6 +64,18 @@ export const themes = {
     white: '#ffffff',
     border: '#e8dff5',
   },
+  dark: {
+    name: 'Nocturno',
+    description: 'Modo oscuro para lectura nocturna',
+    primary: '#00d4ff',
+    primaryDark: '#0099cc',
+    secondary: '#1e2a38',
+    text: '#e8e8e8',
+    textLight: '#a0aec0',
+    background: '#0f1419',
+    white: '#1a2332',
+    border: '#2d3748',
+  },
 };
 
 export const ThemeProvider = ({ children }) => {
@@ -95,6 +107,13 @@ export const ThemeProvider = ({ children }) => {
       document.documentElement.style.setProperty('--color-background', theme.background);
       document.documentElement.style.setProperty('--color-white', theme.white);
       document.documentElement.style.setProperty('--color-border', theme.border);
+      
+      // Agregar clase al body para temas oscuros
+      if (themeName === 'dark') {
+        document.body.classList.add('dark-theme');
+      } else {
+        document.body.classList.remove('dark-theme');
+      }
     }
   };
 

@@ -1,11 +1,12 @@
 /* src/components/Footer.css */
 .footer {
-  background-color: #1a1a1a;
+  background-color: var(--color-secondary);
   color: white;
   padding: 40px 0 20px;
   margin-top: 60px;
   width: 100%;
   box-sizing: border-box;
+  transition: background-color 0.3s ease;
 }
 
 .footer-inner {
@@ -23,7 +24,8 @@
 .footer-section h3 {
   font-size: 1.3rem;
   margin-bottom: 15px;
-  color: #e74c3c;
+  color: var(--color-primary);
+  transition: color 0.3s ease;
 }
 
 .footer-section p,
@@ -33,17 +35,18 @@
   text-decoration: none;
   display: block;
   margin-bottom: 8px;
+  transition: color 0.3s ease;
 }
 
 .footer-section a:hover {
-  color: #e74c3c;
+  color: var(--color-primary);
 }
 
 .footer-bottom {
   text-align: center;
   margin-top: 40px;
   padding-top: 20px;
-  border-top: 1px solid #333;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: #888;
   font-size: 0.9rem;
 }

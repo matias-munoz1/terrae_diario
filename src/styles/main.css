@@ -33,15 +33,16 @@ html, body {
 
 body {
   font-family: 'Georgia', 'Times New Roman', serif;
-  color: var(--text-color);
-  background-color: var(--background-color);
+  color: var(--color-text);
+  background-color: var(--color-background);
   line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .app {
   max-width: 1400px;
   margin: 0 auto;
-  background-color: white;
+  background-color: var(--color-background);
   box-sizing: border-box;
   overflow-x: hidden; /* evitar que contenido interno cause scroll */
 }

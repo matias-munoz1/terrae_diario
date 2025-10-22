@@ -25,7 +25,7 @@
 }
 
 .theme-modal {
-  background: white;
+  background: var(--color-white);
   border-radius: 20px;
   max-width: 950px;
   width: 100%;
@@ -49,19 +49,19 @@
 .theme-modal-header {
   text-align: center;
   padding: 40px 40px 24px;
-  border-bottom: 2px solid #f0f0f0;
+  border-bottom: 2px solid var(--color-border);
 }
 
 .theme-modal-header h2 {
   font-family: 'Georgia', serif;
   font-size: 2.2rem;
-  color: #1a1a1a;
+  color: var(--color-text);
   margin: 0 0 12px 0;
   font-weight: 700;
 }
 
 .theme-modal-header p {
-  color: #666;
+  color: var(--color-text-light);
   font-size: 1.05rem;
   margin: 0;
   line-height: 1.5;
@@ -80,7 +80,7 @@
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  background: #fafafa;
+  background: var(--color-background);
   position: relative;
 }
 
@@ -90,7 +90,7 @@
 }
 
 .theme-card.selected {
-  border-color: #1a1a1a;
+  border-color: var(--color-primary);
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
   transform: translateY(-4px);
 }
@@ -111,19 +111,19 @@
 
 .theme-info {
   padding: 24px;
-  background: white;
+  background: var(--color-white);
 }
 
 .theme-info h3 {
   font-family: 'Georgia', serif;
   font-size: 1.4rem;
-  color: #1a1a1a;
+  color: var(--color-text);
   margin: 0 0 10px 0;
   font-weight: 700;
 }
 
 .theme-info p {
-  color: #666;
+  color: var(--color-text-light);
   font-size: 0.95rem;
   margin: 0;
   line-height: 1.5;
@@ -133,7 +133,7 @@
   position: absolute;
   top: 14px;
   right: 14px;
-  background: #1a1a1a;
+  background: var(--color-primary);
   color: white;
   width: 36px;
   height: 36px;
@@ -159,11 +159,11 @@
 .theme-modal-footer {
   text-align: center;
   padding: 24px 40px 40px;
-  border-top: 2px solid #f0f0f0;
+  border-top: 2px solid var(--color-border);
 }
 
 .theme-hint {
-  color: #999;
+  color: var(--color-text-light);
   font-size: 0.95rem;
   font-style: italic;
   margin: 0;
