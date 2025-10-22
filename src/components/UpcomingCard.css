@@ -1,0 +1,78 @@
+.upcoming-card {
+  background: transparent;
+}
+
+.upcoming-title {
+  font-family: 'Georgia', serif;
+  font-size: 1.25rem;
+  margin: 0 0 12px 0;
+  color: #1a1a1a;
+  text-align: left;
+}
+
+.upcoming-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.upcoming-item {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
+.upcoming-link {
+  display: flex;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.upcoming-thumb {
+  width: 140px;
+  min-width: 140px;
+  height: 90px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.upcoming-badge {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  background: #e74c3c;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 0.7rem;
+  border-radius: 3px;
+}
+
+.upcoming-body {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.upcoming-head {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.upcoming-meta .upcoming-date {
+  color: #999;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .upcoming-thumb {
+    width: 110px;
+    height: 78px;
+  }
+}

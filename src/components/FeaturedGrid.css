@@ -1,0 +1,144 @@
+.featured-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+/* Card principal (izquierda) */
+.featured-main {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 420px;
+}
+
+.featured-main-bg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.featured-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+  padding: 24px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* asegurar que el contenido se alinee a la izquierda */
+}
+
+.featured-category {
+  display: inline-block;
+  background: #e74c3c;
+  color: white;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 3px;
+  margin-bottom: 12px;
+  align-self: flex-start; /* forzar alineación a la izquierda si el padre usa flex */
+  z-index: 2; /* asegurar que quede por encima del gradiente */
+}
+
+.featured-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+  line-height: 1.1;
+  color: white;
+  font-family: 'Georgia', serif;
+}
+
+.featured-date {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.8);
+  margin: 0;
+}
+
+/* Cards secundarias (derecha) */
+.featured-side {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+}
+
+.featured-side-card {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 202px;
+}
+
+.featured-side-bg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.featured-side-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0 0 6px 0;
+  line-height: 1.2;
+  color: white;
+  font-family: 'Georgia', serif;
+}
+
+/* Hover effects */
+.featured-main:hover .featured-main-bg,
+.featured-side-card:hover .featured-side-bg {
+  transform: scale(1.05);
+  transition: transform 0.4s ease;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-main {
+    height: 320px;
+  }
+
+  .featured-side-card {
+    height: 240px;
+  }
+
+  .featured-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-main {
+    height: 280px;
+  }
+
+  .featured-title {
+    font-size: 1.4rem;
+  }
+
+  .featured-side-title {
+    font-size: 1rem;
+  }
+
+  .featured-overlay {
+    padding: 16px;
+  }
+}

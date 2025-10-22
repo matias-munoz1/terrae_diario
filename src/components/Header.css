@@ -1,0 +1,112 @@
+/* src/components/Header.css */
+.header {
+  background-color: white;
+  border-bottom: 3px solid #e74c3c;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* pequeño padding vertical para reducir blanco sin achicar tipografía */
+  max-width: 1400px; /* limitar contenido interno y centrarlo */
+  margin: 0 auto;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #fff;
+}
+
+.logo a {
+  display: inline-block;
+  line-height: 1;
+  transition: opacity 0.3s;
+}
+
+.logo a:hover {
+  opacity: 0.8;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.header-info span {
+  font-size: 0.9rem; /* restaurado para mantener equilibrio con logo */
+  color: #666;
+  text-transform: capitalize;
+}
+
+.navbar {
+  display: flex;
+  gap: 0;
+  background-color: #1a1a1a;
+  overflow-x: hidden; /* evitar scroll horizontal en el navbar */
+  justify-content: center; /* centrar los enlaces horizontalmente */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 16px; /* reducido para barra de navegación más compacta */
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s, color 0.3s;
+  white-space: nowrap;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar a:hover {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.navbar a:first-child {
+  border-left: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-top {
+    padding: 10px 12px;
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+  }
+
+  .logo a {
+    font-size: 1.5rem;
+  }
+
+  .header-info {
+    align-items: center;
+  }
+
+  .header-info span {
+    font-size: 0.8rem;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar a {
+    padding: 10px 12px;
+    font-size: 0.75rem;
+  }
+}

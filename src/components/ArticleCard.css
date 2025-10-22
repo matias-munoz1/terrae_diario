@@ -1,0 +1,146 @@
+/* src/components/ArticleCard.css */
+.article-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.article-card a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.article-image {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.article-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.article-card:hover .article-image img {
+  transform: scale(1.05);
+}
+
+.category-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #e74c3c;
+  color: white;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 3px;
+  z-index: 10;
+}
+
+.article-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-content h3 {
+  font-size: 1.4rem;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+  font-family: 'Georgia', serif;
+  font-weight: 600;
+}
+
+.article-content .subtitle {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  flex: 1;
+}
+
+.article-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.article-meta .author {
+  font-weight: 600;
+  color: #555;
+}
+
+.article-meta .date {
+  color: #999;
+}
+
+/* Featured article variant */
+.article-card.featured {
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.article-card.featured a {
+  flex-direction: row;
+}
+
+.article-card.featured .article-image {
+  height: 100%;
+  min-height: 400px;
+}
+
+.article-card.featured h3 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.article-card.featured .subtitle {
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .article-card.featured a {
+    flex-direction: column;
+  }
+
+  .article-card.featured .article-image {
+    min-height: 250px;
+  }
+
+  .article-card.featured h3 {
+    font-size: 1.6rem;
+  }
+
+  .article-content h3 {
+    font-size: 1.2rem;
+  }
+}
