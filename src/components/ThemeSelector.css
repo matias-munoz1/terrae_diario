@@ -1,0 +1,106 @@
+/* src/components/ThemeSelector.css */
+.theme-selector-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: 3px solid white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.5);
+  transition: all 0.3s ease;
+  z-index: 9999;
+  opacity: 0.9;
+}
+
+.theme-selector-btn:active {
+  transform: scale(0.95);
+}
+
+.theme-selector-btn:hover {
+  opacity: 1;
+  transform: scale(1.08);
+  box-shadow: 0 6px 30px rgba(102, 126, 234, 0.7);
+}
+
+.theme-selector-btn svg {
+  color: white;
+  width: 26px;
+  height: 26px;
+  transition: transform 0.3s ease;
+}
+
+.theme-selector-btn:hover svg {
+  transform: rotate(-15deg) scale(1.1);
+}
+
+/* Animación sutil de pulsación */
+@keyframes gentlePulse {
+  0%, 100% {
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.5);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 6px 25px rgba(102, 126, 234, 0.65);
+    transform: scale(1.02);
+  }
+}
+
+.theme-selector-btn {
+  animation: gentlePulse 3s ease-in-out infinite;
+}
+
+.theme-selector-btn:hover {
+  animation: none;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .theme-selector-btn {
+    bottom: 18px;
+    right: 18px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .theme-selector-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Móvil */
+@media (max-width: 768px) {
+  .theme-selector-btn {
+    bottom: 16px;
+    right: 16px;
+    width: 48px;
+    height: 48px;
+    border-width: 2px;
+  }
+
+  .theme-selector-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* Móvil pequeño */
+@media (max-width: 480px) {
+  .theme-selector-btn {
+    bottom: 12px;
+    right: 12px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .theme-selector-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+}

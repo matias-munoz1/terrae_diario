@@ -38,7 +38,7 @@
 
 .featured-category {
   display: inline-block;
-  background: #e74c3c;
+  background: var(--color-primary);
   color: white;
   padding: 6px 12px;
   font-size: 0.75rem;

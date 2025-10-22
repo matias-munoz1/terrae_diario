@@ -1,7 +1,7 @@
 /* src/components/Header.css */
 .header {
-  background-color: white;
-  border-bottom: 3px solid #e74c3c;
+  background-color: var(--color-white);
+  border-bottom: 3px solid var(--color-primary);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
@@ -17,8 +17,8 @@
   padding: 10px 20px; /* pequeño padding vertical para reducir blanco sin achicar tipografía */
   max-width: 1400px; /* limitar contenido interno y centrarlo */
   margin: 0 auto;
-  border-bottom: 1px solid #e0e0e0;
-  background-color: #fff;
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-white);
 }
 
 .logo a {
@@ -52,7 +52,7 @@
 .navbar {
   display: flex;
   gap: 0;
-  background-color: #1a1a1a;
+  background-color: var(--color-secondary);
   overflow-x: hidden; /* evitar scroll horizontal en el navbar */
   justify-content: center; /* centrar los enlaces horizontalmente */
 }
@@ -71,7 +71,7 @@
 }
 
 .navbar a:hover {
-  background-color: #e74c3c;
+  background-color: var(--color-primary);
   color: white;
 }
 
